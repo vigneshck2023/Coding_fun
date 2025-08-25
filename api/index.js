@@ -1,6 +1,11 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+
+const corsOption = {
+  origin: "*",
+  credential: true,
+}
 const { initializeDatabase } = require("../db/db.connect");
 const Movie = require("../models/movie.models");
 
